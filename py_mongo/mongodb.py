@@ -10,13 +10,23 @@ users = db["users"]  # collection
 candidates = db["candidates"]  # collection
 comments = db["comments"]  # collection
 
-# comments.insert_many(data)
+# l = [
+#     {"name": "balaji", "address": "pondy"},
+#     {"name": "monika", "address": "london"},
+#     {"name": "anbarasan", "address": "australia"},
+#     {"name": "santhosh", "address": "london"},
+#     {"name": "bharath", "address": "pondy"},
+#     {"name": "ijass", "address": "pondy"},
+#     {"name": "ragavan", "address": "australia"}
+# ]
 
-query = {"_id": ObjectId("63a07eb0ee99f1d1797d081a")}
+# users.insert_many(l)
+
+# query = {"_id": ObjectId("63a07eb0ee99f1d1797d081b")}
 # ftr = {"name": 0, "email": 0}
-ftr = {"name": 1}
+# ftr = {"name": 1}
 
-print(comments.find_one(query, ftr))
+# print(comments.find_one(query))
 # comments.drop()
 
 # data = [
@@ -47,9 +57,11 @@ print(comments.find_one(query, ftr))
 
 # query = {"_id" : ObjectId(id)}
 # query = {"_id" : ObjectId("63a077f194b94248a0c6c0e6")}
-# query = {"name" : "balaji"}
+query = {"address": "australia"}
 
-# print(users.find_one(query))
+
+for i in users.find(query):
+    print(i)
 # print(users.find(query))
 
 # for i in users.find(query):
