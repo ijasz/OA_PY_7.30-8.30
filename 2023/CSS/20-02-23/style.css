@@ -1,0 +1,29 @@
+.box {
+  height: 100px;
+  width: 100px;
+  margin-block: 20px;
+}
+
+.box1 {
+  position: absolute;
+  left: 100px;
+  background-color: aqua;
+  /* z-index: 99; */
+}
+
+.box2 {
+  position: absolute;
+  left: 150px;
+  background-color: blanchedalmond;
+}
+
+.box3 {
+  /* position: absolute; */
+  /* bottom: 0%;
+  right: 0%; */
+  background-color: blueviolet;
+}
+
+.box4 {
+  background-color: rgb(199, 209, 0);
+}
