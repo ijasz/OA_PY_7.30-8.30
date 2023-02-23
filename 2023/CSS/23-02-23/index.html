@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 50px;
+      }
+      .outer-box {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -100px -100px;
+        height: 200px;
+        width: 200px;
+        background-color: rgb(0, 99, 185);
+      }
+
+      .inner-box {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50px -50px;
+        background-color: rgb(0, 185, 154);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-box">
+      <div class="inner-box"></div>
+    </div>
+  </body>
+</html>
