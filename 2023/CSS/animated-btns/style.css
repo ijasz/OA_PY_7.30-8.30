@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.my-1 {
+  margin-block: 10px;
+}
+
+.btns {
+  margin-block: 100px;
+}
+
+[class|="btn"] {
+  display: inline-block;
+  width: 180px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  padding-block: 20px;
+  position: relative;
+  margin-inline: 20px;
+}
+
+
+
+[class|="btn"]:active {
+  scale: 1.01;
+}
+
+[class|="btn"] > span::selection {
+  background-color: transparent;
+}
+
+[class|="btn"] > span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-swipe {
+    overflow: hidden;
+  border: 1px solid purple;
+}
+
+.btn-swipe::before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  height: 100%;
+  width: 0%;
+  background-color: purple;
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+
+.btn-swipe:hover::before {
+  width: 100%;
+}
+
+.btn-swipe:hover > span {
+  color: white;
+}
+
+.btn-smoosh {
+    overflow: hidden;
+  border: 1px solid purple;
+}
+
+.btn-smoosh::before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  height: 0%;
+  width: 100%;
+  background-color: purple;
+  transition: all 0.5s;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.btn-smoosh::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  height: 0%;
+  width: 100%;
+  background-color: purple;
+  transition: all 0.5s;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.btn-smoosh:hover::before, .btn-smoosh:hover::after {
+  height: 50%;
+}
+
+.btn-smoosh:hover > span {
+  color: white;
+}
